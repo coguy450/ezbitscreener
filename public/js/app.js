@@ -116,9 +116,6 @@ Vue.component('demo-grid', {
       console.log(err)
     })
 
-    this.$http.get('/getBalances').then(responseTwo => {
-      this.bitCoin50 = responseTwo.body.bitCoin50
-    }, (err) => {console.error(err)})
   }
 })
 
