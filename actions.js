@@ -56,7 +56,7 @@ function processResults (incomingResponse, response, markets) {
     delete ac.OpenBuyOrders
     delete ac.Ask
   })
-  clonedResult = clonedResult.filter((obj) => (obj.dayRange > 5 && obj.MarketName.startsWith('BTC-')))
+  clonedResult = clonedResult.filter((obj) => (obj.MarketName.startsWith('BTC-')))
   response.status(200).send(clonedResult)
 }
 
