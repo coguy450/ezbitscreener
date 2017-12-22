@@ -11,11 +11,16 @@
   "license": "ISC",
   "dependencies": {
     "async": "^2.6.0",
+    "autobahn": "^17.5.2",
+    "bittrex-orderbook": "^2.0.5",
     "body-parser": "^1.18.2",
     "coinbase": "^2.0.6",
     "express": "^4.16.2",
     "mongodb": "^2.2.33",
-    "node-bittrex-api": "^0.7.8",
-    "superagent": "^3.8.1"
+    "node-bittrex-api": "^0.8.1",
+    "poloniex-api-node": "^1.6.5",
+    "socket.io": "^2.0.4",
+    "superagent": "^3.8.1",
+    "ws": "^3.3.3"
   }
 }

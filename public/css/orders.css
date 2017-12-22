@@ -1,0 +1,22 @@
+.orderWrap {
+  display: flex;
+  flex-direction: row;
+}
+
+.bidTable {
+  width: 47vw;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+
+}
+
+.tableTitle {
+  margin-left: 35px;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.order-header {
+  margin-left: 30px;
+}

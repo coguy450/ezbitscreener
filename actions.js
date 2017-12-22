@@ -45,6 +45,7 @@ function processResults (incomingResponse, response, markets) {
           ac.thirtyDayHigh = ma.thirtyDayHigh
           ac.down30 = down30.toFixed(2) + '%'
           ac.range30 = range30.toFixed(2) + '%'
+          ac.closeToLow = (ac.Last - ac.Low)/ac.Low
         }
       })
     }
@@ -55,8 +56,9 @@ function processResults (incomingResponse, response, markets) {
     delete ac.OpenSellOrders
     delete ac.OpenBuyOrders
     delete ac.Ask
+    delete ac.PrevDay
   })
-  clonedResult = clonedResult.filter((obj) => (obj.MarketName.startsWith('BTC-')))
+  clonedResult = clonedResult.filter((obj) => (obj.dayRange > 5 && obj.MarketName.startsWith('BTC-')))
   response.status(200).send(clonedResult)
 }
 

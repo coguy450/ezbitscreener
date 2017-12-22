@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="css/orders.css">
+    <title>Order Book</title>
+  </head>
+  <body>
+    <div class="ui menu">
+      <a class="item" href="/">Home </a>
+      <a class="item" href="/charts">Charts</a>
+      <a class="item">About</a>
+    </div>
+    <div id="orders">
+        <h1 class="order-header">Order book for {{currentMarket}}</h1>
+      <div class="orderWrap">
+        <div class="bidTable" >
+            <span class="tableTitle">Bids</span>
+          <table class="ui selectable table">
+            <div class="">
+              <thead>
+                <tr>
+                  <th>Rate</th>
+                  <th>Quantity</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr v-for="b in bidData">
+                  <td>{{b.rate}}</td>
+                  <td>{{b.quantity}}</td>
+                </tr>
+              </tbody>
+            </table>
+            </div>
+            <div class="bidTable">
+              <span class="tableTitle">Asks</span>
+              <table class="ui selectable table">
+                <div class="">
+                  <thead>
+                    <tr>
+                      <th>Rate</th>
+                      <th>Quantity</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr v-for="a in askData">
+                      <td>{{a.rate}}</td>
+                      <td>{{a.quantity}}</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+        </div>
+      </div>
+
+    </div>
+    <script src="js/vue.min.js"></script>
+    <script src="js/vue-resource.min.js"></script>
+    <script src="js/orderTable.js"></script>
+  </body>
+</html>

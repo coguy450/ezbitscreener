@@ -20,11 +20,6 @@
         <h3 class="ui block header">Crypto Screener</h3>
         <script type="text/x-template" id="grid-template">
           <div>
-            <h3 v-if="thirtyDayLow">{{currentMarket}} - 30 day Low: {{thirtyDayLow}} 30 day high: {{thirtyDayHigh}} range: {{thirtyDayRange}}</h3>
-            <div v-if="thirtyDayLow" class="ui action input">
-            <input type="text" placeholder="0.00432" v-model="alertAmt">
-              <button class="ui button" v-on:click="setAlert">Set Alert at</button>
-            </div>
             <div class="doubleTableWrap">
               <table>
                 <thead>

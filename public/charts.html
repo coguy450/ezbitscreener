@@ -14,7 +14,7 @@
     </div>
     <div id="charts">
 
-      <h1>{{currentMarket}}</h1>
+    <h1>{{currentMarket}}  <a v-on:click="goOrders">Order book</a></h1>
       <div id="timePeriodDropdown" class="ui form">
         <div class="fields" id="chartFields" >
           <select v-on:change="dataPoints">
@@ -33,7 +33,9 @@
             <option value="fiveMin">5 Minutes</option>
             <option value="oneMin">1 Minute</option>
           </select>
+
         </div>
+
       </div>
       <div class="ui segment loader-block" v-if="loading">
         <div class="ui active inverted dimmer">

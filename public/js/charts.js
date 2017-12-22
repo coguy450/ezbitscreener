@@ -1,5 +1,7 @@
 let dataPoints = 50
 
+
+
 var margin = {top: 20, right: 50, bottom: 30, left: 50},
             width = 960 - margin.left - margin.right,
             height = 500 - margin.top - margin.bottom;
@@ -140,17 +142,16 @@ var margin = {top: 20, right: 50, bottom: 30, left: 50},
     }
 
     function enter() {
-        coordsText.style("display", "inline");
+      coordsText.style("display", "inline");
     }
 
     function out() {
-        coordsText.style("display", "none");
+      coordsText.style("display", "none");
     }
-
     function move(coords) {
-        coordsText.text(
-            timeAnnotation.format()(coords.x) + ", " + ohlcAnnotation.format()(coords.y)
-        );
+      coordsText.text(
+          timeAnnotation.format()(coords.x) + ", " + ohlcAnnotation.format()(coords.y)
+      );
     }
 
 
@@ -175,25 +176,21 @@ var margin = {top: 20, right: 50, bottom: 30, left: 50},
          })
        },
        dataPoints: function (newNum) {
-         console.log('new number', newNum.target.value)
          svg.selectAll("*").remove();
          dataPoints = newNum.target.value
          kickOff(this.savedData)
          this.loading = false
+       },
+       goOrders: function () {
+         location.href = `/orders?cur=${this.currentMarket}`
        }
      },
      created: function () {
-       this.currentMarket = window.location.search.split('=')[1] || 'USDT-BTC'
-       this.$http.get(`/getHistory?market=${this.currentMarket}`).then(response => {
-         this.savedData = response.data
-         kickOff(response.data)
-         this.loading = false
-        //  this.gridColumns = Object.keys(response.data.filteredDates[0])
-        //  this.gridData = response.data.filteredDates
-        //  this.thirtyDayLow = response.data.thirtyDayLow
-        //  this.thirtyDayHigh = response.data.thirtyDayHigh
-        //  this.thirtyDayRange = (this.thirtyDayHigh - this.thirtyDayLow)/this.thirtyDayLow * 100
-        //  this.thirtyDayRange = this.thirtyDayRange.toFixed(2) + '%'
+        this.currentMarket = window.location.search.split('=')[1] || 'USDT-BTC'
+        this.$http.get(`/getHistory?market=${this.currentMarket}`).then(response => {
+        this.savedData = response.data
+        kickOff(response.data)
+        this.loading = false
        }, (err) => {
          console.log(err)
        })
