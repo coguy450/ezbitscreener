@@ -30,7 +30,7 @@ wss.on('connection', function connection(ws, req) {
 
 const port = process.env.PORT || 14000
 
-server.listen(14000, function listening() {
+server.listen(port, function listening() {
   console.log('Listening on %d', server.address().port);
 });
 
