@@ -2,8 +2,8 @@ const MongoClient = require('mongodb').MongoClient
 const request = require('superagent')
 const actions = require('./actions')
 const async = require('async')
-// const connectionString = process.env.PROD_MONGODB ? process.env.PROD_MONGODB : 'mongodb://localhost/bitcoin'
-const connectionString = 'mongodb://bitcoinNodeApp:dzwBgvX7syuVCLqm2Ash@ds123956.mlab.com:23956/bitcoin'
+const connectionString = process.env.PROD_MONGODB ? process.env.PROD_MONGODB : 'mongodb://localhost/bitcoin'
+
 const clURL = 'https://www.cryptocompare.com/api/data/CoinList'
 
 let thisDB
