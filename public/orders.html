@@ -24,12 +24,15 @@
                 <tr>
                   <th>Rate</th>
                   <th>Quantity</th>
+                  <th>Exchange</th>
                 </tr>
               </thead>
               <tbody>
                 <tr v-for="b in bidData">
                   <td>{{b.rate}}</td>
                   <td>{{b.quantity}}</td>
+                  <td v-if="b.exchange">{{b.exchange}}</td>
+                  <td v-if="!b.exchange">Bittrex</td>
                 </tr>
               </tbody>
             </table>
@@ -42,12 +45,15 @@
                     <tr>
                       <th>Rate</th>
                       <th>Quantity</th>
+                      <th>Exchange</th>
                     </tr>
                   </thead>
                   <tbody>
                     <tr v-for="a in askData">
                       <td>{{a.rate}}</td>
                       <td>{{a.quantity}}</td>
+                      <td v-if="a.exchange">{{a.exchange}}</td>
+                      <td v-if="!a.exchange">Bittrex</td>
                     </tr>
                   </tbody>
                 </table>
