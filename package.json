@@ -19,7 +19,7 @@
     "mongodb": "^3.1.13",
     "node-bittrex-api": "^0.8.3",
     "poloniex-api-node": "^1.6.5",
-    "socket.io": "^2.0.4",
+    "socket.io": "^2.4.0",
     "superagent": "^3.8.1",
     "ws": "^3.3.3"
   }
