@@ -1,6 +1,6 @@
 from coinbase.wallet.client import Client
 
-client = Client('e2Sy9s5yx6GnsUqT', <api_secret>, api_version='YYYY-MM-DD')
+client = Client('', <api_secret>, api_version='YYYY-MM-DD')
 
 currency_code = 'USD'  # can also use EUR, CAD, etc.
 
