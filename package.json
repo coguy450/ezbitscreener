@@ -14,7 +14,7 @@
     "autobahn": "^17.5.2",
     "bittrex-orderbook": "^2.0.5",
     "body-parser": "^1.18.2",
-    "express": "^4.16.2",
+    "express": "^4.17.3",
     "mongodb": "^3.1.13",
     "node-bittrex-api": "^0.8.3",
     "poloniex-api-node": "^1.6.5",
